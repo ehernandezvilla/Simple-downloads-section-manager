@@ -1,0 +1,379 @@
+/**
+ * Downloads Section Manager - Admin Styles
+ * ==========================================
+ * 
+ * Estilos para el panel de administración del plugin
+ * 
+ * @package Downloads Section Manager
+ * @version 1.0.0
+ */
+
+/* ============================================
+   1. CONTENEDOR PRINCIPAL
+   ============================================ */
+
+.dsm-admin-container {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 24px;
+    margin-top: 24px;
+    max-width: 1200px;
+}
+
+/* ============================================
+   2. CONTENIDO PRINCIPAL
+   ============================================ */
+
+.dsm-main-content {
+    background: #ffffff;
+    padding: 24px;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.dsm-main-content h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #1d2327;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* ============================================
+   3. FORMULARIO Y TABLA
+   ============================================ */
+
+.dsm-main-content .form-table th {
+    width: 200px;
+    vertical-align: top;
+    padding-top: 12px;
+}
+
+.dsm-main-content .form-table td {
+    padding-bottom: 20px;
+}
+
+.dsm-main-content .form-table label {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-weight: 500;
+    color: #1d2327;
+    cursor: pointer;
+}
+
+.dsm-main-content .form-table input[type="checkbox"] {
+    margin: 2px 0 0 0;
+    flex-shrink: 0;
+}
+
+.dsm-main-content .description {
+    margin-top: 8px;
+    color: #646970;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+/* ============================================
+   4. SIDEBAR
+   ============================================ */
+
+.dsm-sidebar {
+    background: #ffffff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    height: fit-content;
+}
+
+/* ============================================
+   5. INFO BOX
+   ============================================ */
+
+.dsm-info-box {
+    padding: 20px;
+}
+
+.dsm-info-box h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #1d2327;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid #f0f0f1;
+    padding-bottom: 8px;
+}
+
+.dsm-info-box h4 {
+    margin: 16px 0 8px 0;
+    color: #1d2327;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dsm-info-box p {
+    margin-bottom: 12px;
+    color: #646970;
+    line-height: 1.5;
+    font-size: 13px;
+}
+
+.dsm-info-box hr {
+    margin: 16px 0;
+    border: none;
+    border-top: 1px solid #f0f0f1;
+}
+
+.dsm-info-box a {
+    color: #2271b1;
+    text-decoration: none;
+}
+
+.dsm-info-box a:hover {
+    color: #135e96;
+    text-decoration: underline;
+}
+
+/* ============================================
+   6. STATUS INDICATOR
+   ============================================ */
+
+.dsm-status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid;
+    position: relative;
+}
+
+.dsm-status::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+    position: relative;
+    top: -1px;
+}
+
+.dsm-status-enabled {
+    background: #d1e7dd;
+    color: #0a3622;
+    border-color: #badbcc;
+}
+
+.dsm-status-enabled::before {
+    background: #198754;
+    box-shadow: 0 0 0 2px rgba(25, 135, 84, 0.2);
+}
+
+.dsm-status-disabled {
+    background: #f8d7da;
+    color: #58151c;
+    border-color: #f1aeb5;
+}
+
+.dsm-status-disabled::before {
+    background: #dc3545;
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.2);
+}
+
+/* ============================================
+   7. BOTONES
+   ============================================ */
+
+.dsm-main-content .button-primary {
+    background: #2271b1;
+    border-color: #2271b1;
+    color: #ffffff;
+    padding: 8px 16px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.dsm-main-content .button-primary:hover {
+    background: #135e96;
+    border-color: #135e96;
+    color: #ffffff;
+}
+
+/* ============================================
+   8. NOTIFICACIONES
+   ============================================ */
+
+.dsm-admin-container .notice {
+    margin: 20px 0 0 0;
+}
+
+.dsm-admin-container .notice p {
+    margin: 0.5em 0;
+    padding: 2px 0;
+}
+
+/* ============================================
+   9. RESPONSIVE DESIGN
+   ============================================ */
+
+@media screen and (max-width: 1024px) {
+    .dsm-admin-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .dsm-sidebar {
+        order: -1;
+    }
+}
+
+@media screen and (max-width: 782px) {
+    .dsm-admin-container {
+        margin-top: 16px;
+        gap: 16px;
+    }
+    
+    .dsm-main-content {
+        padding: 16px;
+    }
+    
+    .dsm-info-box {
+        padding: 16px;
+    }
+    
+    .dsm-main-content .form-table th {
+        width: auto;
+        display: block;
+        padding-bottom: 8px;
+    }
+    
+    .dsm-main-content .form-table td {
+        display: block;
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .dsm-admin-container {
+        margin-top: 12px;
+        gap: 12px;
+    }
+    
+    .dsm-main-content,
+    .dsm-info-box {
+        padding: 12px;
+    }
+    
+    .dsm-info-box h3 {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+    
+    .dsm-status {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+}
+
+/* ============================================
+   10. ESTADOS DE INTERACCIÓN
+   ============================================ */
+
+.dsm-main-content .form-table label:hover {
+    color: #2271b1;
+}
+
+.dsm-main-content input[type="checkbox"]:focus {
+    outline: 2px solid #2271b1;
+    outline-offset: 2px;
+}
+
+/* Animación suave para el status indicator */
+.dsm-status {
+    transition: all 0.3s ease;
+}
+
+.dsm-status::before {
+    transition: all 0.3s ease;
+}
+
+/* ============================================
+   11. INTEGRACIÓN CON WORDPRESS ADMIN
+   ============================================ */
+
+/* Ajustes para que se vea bien en el contexto de WP Admin */
+.wrap .dsm-admin-container {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* Mejorar legibilidad en temas oscuros */
+@media (prefers-color-scheme: dark) {
+    .dsm-main-content,
+    .dsm-sidebar {
+        background: #1d2327;
+        border-color: #3c434a;
+        color: #f0f0f1;
+    }
+    
+    .dsm-info-box h3,
+    .dsm-info-box h4,
+    .dsm-main-content h2 {
+        color: #f0f0f1;
+    }
+    
+    .dsm-info-box p,
+    .dsm-main-content .description {
+        color: #c3c4c7;
+    }
+    
+    .dsm-info-box hr {
+        border-color: #3c434a;
+    }
+}
+
+/* ============================================
+   12. UTILIDADES
+   ============================================ */
+
+.dsm-text-center {
+    text-align: center;
+}
+
+.dsm-text-right {
+    text-align: right;
+}
+
+.dsm-mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.dsm-mt-0 {
+    margin-top: 0 !important;
+}
+
+.dsm-hidden {
+    display: none !important;
+}
+
+/* Clase para elementos que solo se muestran cuando está habilitado/deshabilitado */
+.dsm-show-when-enabled {
+    display: none;
+}
+
+.dsm-enabled .dsm-show-when-enabled {
+    display: block;
+}
+
+.dsm-show-when-disabled {
+    display: none;
+}
+
+.dsm-disabled .dsm-show-when-disabled {
+    display: block;
+}
