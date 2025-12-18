@@ -11,7 +11,7 @@
  * Requires PHP: 7.4
  * WC requires at least: 5.0
  * WC tested up to: 8.0
- * Text Domain: simple-downloads-section-manager
+ * Text Domain: simple-simple-downloads-section-manager
  * Domain Path: /languages
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -78,7 +78,7 @@ class Downloads_Section_Manager {
      */
     public function init() {
         // Cargar textdomain para traducciones
-        load_plugin_textdomain('downloads-section-manager', false, dirname(plugin_basename(__FILE__)) . '/languages');
+        load_plugin_textdomain('simple-downloads-section-manager', false, dirname(plugin_basename(__FILE__)) . '/languages');
     }
     
     /**
@@ -112,10 +112,10 @@ class Downloads_Section_Manager {
     public function add_admin_menu() {
         add_submenu_page(
             'woocommerce',
-            __('Downloads Manager', 'downloads-section-manager'),
-            __('Downloads Manager', 'downloads-section-manager'),
+            __('Downloads Manager', 'simple-downloads-section-manager'),
+            __('Downloads Manager', 'simple-downloads-section-manager'),
             'manage_woocommerce',
-            'downloads-section-manager',
+            'simple-downloads-section-manager',
             array($this, 'admin_page')
         );
     }
@@ -130,18 +130,18 @@ class Downloads_Section_Manager {
             update_option(self::OPTION_NAME, $enabled);
             
             echo '<div class="notice notice-success"><p>' . 
-                 __('Configuración guardada correctamente.', 'downloads-section-manager') . 
+                 __('Configuración guardada correctamente.', 'simple-downloads-section-manager') . 
                  '</p></div>';
         }
         
         $enabled = get_option(self::OPTION_NAME, 'yes');
         ?>
         <div class="wrap">
-            <h1><?php _e('Downloads Section Manager', 'downloads-section-manager'); ?></h1>
+            <h1><?php _e('Downloads Section Manager', 'simple-downloads-section-manager'); ?></h1>
             
             <div class="dsm-admin-container">
                 <div class="dsm-main-content">
-                    <h2><?php _e('Configuración', 'downloads-section-manager'); ?></h2>
+                    <h2><?php _e('Configuración', 'simple-downloads-section-manager'); ?></h2>
                     
                     <form method="post" action="">
                         <?php wp_nonce_field('dsm_save_settings', 'dsm_nonce'); ?>
@@ -149,7 +149,7 @@ class Downloads_Section_Manager {
                         <table class="form-table">
                             <tr>
                                 <th scope="row">
-                                    <?php _e('Mostrar sección Descargas', 'downloads-section-manager'); ?>
+                                    <?php _e('Mostrar sección Descargas', 'simple-downloads-section-manager'); ?>
                                 </th>
                                 <td>
                                     <label>
@@ -157,30 +157,30 @@ class Downloads_Section_Manager {
                                                name="<?php echo esc_attr(self::OPTION_NAME); ?>" 
                                                value="yes" 
                                                <?php checked($enabled, 'yes'); ?>>
-                                        <?php _e('Habilitar la sección "Descargas" en Mi Cuenta', 'downloads-section-manager'); ?>
+                                        <?php _e('Habilitar la sección "Descargas" en Mi Cuenta', 'simple-downloads-section-manager'); ?>
                                     </label>
                                     <p class="description">
-                                        <?php _e('Desmarcar para ocultar completamente la pestaña Descargas del menú de Mi Cuenta.', 'downloads-section-manager'); ?>
+                                        <?php _e('Desmarcar para ocultar completamente la pestaña Descargas del menú de Mi Cuenta.', 'simple-downloads-section-manager'); ?>
                                     </p>
                                 </td>
                             </tr>
                         </table>
                         
-                        <?php submit_button(__('Guardar Configuración', 'downloads-section-manager')); ?>
+                        <?php submit_button(__('Guardar Configuración', 'simple-downloads-section-manager')); ?>
                     </form>
                 </div>
                 
                 <div class="dsm-sidebar">
                     <div class="dsm-info-box">
-                        <h3><?php _e('Información', 'downloads-section-manager'); ?></h3>
-                        <p><?php _e('Este plugin te permite controlar si mostrar o no la sección "Descargas" en el área de Mi Cuenta de WooCommerce.', 'downloads-section-manager'); ?></p>
+                        <h3><?php _e('Información', 'simple-downloads-section-manager'); ?></h3>
+                        <p><?php _e('Este plugin te permite controlar si mostrar o no la sección "Descargas" en el área de Mi Cuenta de WooCommerce.', 'simple-downloads-section-manager'); ?></p>
                         
                         <hr>
                         
-                        <h4><?php _e('Estado actual:', 'downloads-section-manager'); ?></h4>
+                        <h4><?php _e('Estado actual:', 'simple-downloads-section-manager'); ?></h4>
                         <p>
                             <span class="dsm-status dsm-status-<?php echo $enabled === 'yes' ? 'enabled' : 'disabled'; ?>">
-                                <?php echo $enabled === 'yes' ? __('Habilitado', 'downloads-section-manager') : __('Deshabilitado', 'downloads-section-manager'); ?>
+                                <?php echo $enabled === 'yes' ? __('Habilitado', 'simple-downloads-section-manager') : __('Deshabilitado', 'simple-downloads-section-manager'); ?>
                             </span>
                         </p>
                         
@@ -258,7 +258,7 @@ class Downloads_Section_Manager {
         ?>
         <tr valign="top">
             <th scope="row" class="titledesc">
-                <?php _e('Sección Descargas', 'downloads-section-manager'); ?>
+                <?php _e('Sección Descargas', 'simple-downloads-section-manager'); ?>
             </th>
             <td class="forminp">
                 <label>
@@ -266,10 +266,10 @@ class Downloads_Section_Manager {
                            name="<?php echo esc_attr(self::OPTION_NAME); ?>" 
                            value="yes" 
                            <?php checked($enabled, 'yes'); ?>>
-                    <?php _e('Mostrar sección Descargas en Mi Cuenta', 'downloads-section-manager'); ?>
+                    <?php _e('Mostrar sección Descargas en Mi Cuenta', 'simple-downloads-section-manager'); ?>
                 </label>
                 <p class="description">
-                    <?php _e('Controla si mostrar o no la pestaña Descargas en el área de cliente.', 'downloads-section-manager'); ?>
+                    <?php _e('Controla si mostrar o no la pestaña Descargas en el área de cliente.', 'simple-downloads-section-manager'); ?>
                 </p>
             </td>
         </tr>
