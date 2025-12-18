@@ -1,5 +1,5 @@
-=== Downloads Section Manager ===
-Contributors: Bakslash & Eduardo Hernández Villa
+=== Simple Downloads Section Manager ===
+Contributors: eduhvilla, bakslash
 Tags: woocommerce, downloads, my-account, hide, toggle
 Requires at least: 5.0
 Tested up to: 6.4
@@ -14,7 +14,7 @@ Plugin minimalista para mostrar/ocultar la sección "Descargas" en WooCommerce M
 
 == Description ==
 
-**Sinmple Downloads Section Manager for WooCommerce** es un plugin súper simple que te permite controlar si mostrar o no la pestaña "Descargas" en el área de Mi Cuenta de WooCommerce.
+**Simple Downloads Section Manager for WooCommerce** es un plugin súper simple que te permite controlar si mostrar o no la pestaña "Descargas" en el área de Mi Cuenta de WooCommerce.
 
 ### 🎯 ¿Para qué sirve?
 
