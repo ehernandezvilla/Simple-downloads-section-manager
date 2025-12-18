@@ -5,7 +5,7 @@
  * Description: Plugin minimalista para mostrar/ocultar la sección "Descargas" en WooCommerce Mi Cuenta.
  * Version: 1.0.0
  * Author: Bakslash & Eduardo Hernández Villa
- * Author URI: 
+ * Author URI: https://www.bakslash.com
  * Requires at least: 5.0
  * Tested up to: 6.4
  * Requires PHP: 7.4
